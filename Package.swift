@@ -1,4 +1,5 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.9
+
 import PackageDescription
 
 let package = Package(
@@ -12,8 +13,6 @@ let package = Package(
         .library(
             name: "BCFloat16",
             targets: ["BCFloat16"]),
-    ],
-    dependencies: [
     ],
     targets: [
         .target(
