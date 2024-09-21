@@ -274,7 +274,7 @@ func isQuietNaN32(_ f32: Float) -> Bool {
     return (exp == 128) && (coef != 0) && ((coef & 0x00400000) != 0)
 }
 
-func checkFromNaN32ps(_ f32: Float, _ f16: BCFloat16, file: StaticString = #file, line: UInt = #line) {
+func checkFromNaN32ps(_ f32: Float, _ f16: BCFloat16, file: StaticString = #filePath, line: UInt = #line) {
     guard isNaN32(f32) else { return }
 
     let u32 = f32.bitPattern
@@ -304,7 +304,7 @@ func checkFromNaN32ps(_ f32: Float, _ f16: BCFloat16, file: StaticString = #file
     }
 }
 
-func checkPrecision(_ f32: Float, _ f16: BCFloat16, _ i: UInt64, file: StaticString = #file, line: UInt = #line) {
+func checkPrecision(_ f32: Float, _ f16: BCFloat16, _ i: UInt64, file: StaticString = #filePath, line: UInt = #line) {
     let u32 = f32.bitPattern
     let u16 = f16.bitPattern
     let f32bis = Float(f16)

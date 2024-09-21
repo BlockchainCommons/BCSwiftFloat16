@@ -6,7 +6,7 @@ public typealias OSFloat16 = BCFloat16
 public typealias OSFloat16 = Float16
 #endif
 
-public struct BCFloat16: Equatable {
+public struct BCFloat16: Equatable, Sendable {
     public let bitPattern: UInt16
     
     public init(bitPattern: UInt16) {
